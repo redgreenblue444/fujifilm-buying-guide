@@ -33,7 +33,7 @@ const cameras = [
             'Anyone who needs to capture fast action'
         ],
         whyChoose: 'If you need to freeze action, track fast-moving subjects, or shoot professional video, the X-H2S is unmatched. Its stacked sensor technology and blazing-fast shooting speeds make it the go-to choice for action photography.',
-        image: 'images/cameras/x-h2s.jpg',
+        image: '/fujifilm-buying-guide/images/cameras/x-h2s.jpg',
         ibis: true,
         dualCards: true,
         weatherSeal: true,
@@ -79,7 +79,7 @@ const cameras = [
             'Photographers who need maximum detail'
         ],
         whyChoose: 'The X-H2 delivers the highest resolution in Fujifilm\'s APS-C lineup, making it perfect for photographers who need maximum detail, large prints, or 8K video. It\'s the flagship choice for resolution-focused work.',
-        image: 'images/cameras/x-h2.jpg',
+        image: '/fujifilm-buying-guide/images/cameras/x-h2.jpg',
         ibis: true,
         dualCards: true,
         weatherSeal: true,
@@ -126,7 +126,7 @@ const cameras = [
             'Anyone wanting the best overall balance'
         ],
         whyChoose: 'The X-T5 combines the high-resolution sensor with Fujifilm\'s iconic retro design, dual card slots, and weather sealing. It\'s the sweet spot for photographers who want professional features in a classic, tactile package.',
-        image: 'images/cameras/x-t5.jpg',
+        image: '/fujifilm-buying-guide/images/cameras/x-t5.jpg',
         ibis: true,
         dualCards: true,
         weatherSeal: true,
@@ -172,7 +172,7 @@ const cameras = [
             'Photographers who prefer rangefinder styling'
         ],
         whyChoose: 'The X-E5 brings the high-resolution sensor to a compact, rangefinder-style body with IBIS for the first time in the X-E series. It\'s perfect for photographers who want maximum image quality in a discreet, portable package.',
-        image: 'images/cameras/x-e5.jpg',
+        image: '/fujifilm-buying-guide/images/cameras/x-e5.jpg',
         ibis: true,
         dualCards: false,
         weatherSeal: false,
@@ -218,7 +218,7 @@ const cameras = [
             'Hybrid shooters (photo + video)'
         ],
         whyChoose: 'The X-S20 is purpose-built for content creation. With its fully articulating screen, exceptional battery life, and vlogging-specific features, it\'s the perfect camera for anyone creating video content.',
-        image: 'images/cameras/x-s20.jpg',
+        image: '/fujifilm-buying-guide/images/cameras/x-s20.jpg',
         ibis: true,
         dualCards: false,
         weatherSeal: false,
@@ -264,7 +264,7 @@ const cameras = [
             'Travel photographers wanting high resolution'
         ],
         whyChoose: 'The X-T50 brings the high-resolution sensor and most X-T5 features to a more compact body, with the added convenience of a dedicated film simulation dial. It\'s perfect for enthusiasts who want flagship image quality in a smaller package.',
-        image: 'images/cameras/x-t50.jpg',
+        image: '/fujifilm-buying-guide/images/cameras/x-t50.jpg',
         ibis: true,
         dualCards: false,
         weatherSeal: true,
@@ -311,7 +311,7 @@ const cameras = [
             'Anyone wanting the smallest camera with EVF'
         ],
         whyChoose: 'The X-T30 III offers incredible value, packing professional features into the most compact body with an electronic viewfinder. It\'s perfect for photographers who prioritize portability and affordability without sacrificing image quality.',
-        image: 'images/cameras/x-t30-iii.jpg',
+        image: '/fujifilm-buying-guide/images/cameras/x-t30-iii.jpg',
         ibis: false,
         dualCards: false,
         weatherSeal: false,
@@ -358,7 +358,7 @@ const cameras = [
             'First-time Fujifilm users'
         ],
         whyChoose: 'The X-M5 is the most affordable way to enter the Fujifilm X-Series ecosystem. While it lacks an EVF and IBIS, it still delivers excellent image quality in the smallest, most budget-friendly package.',
-        image: 'images/cameras/x-m5.jpg',
+        image: '/fujifilm-buying-guide/images/cameras/x-m5.jpg',
         ibis: false,
         dualCards: false,
         weatherSeal: false,
