@@ -14,6 +14,7 @@ const cameras = [
         continuousShooting: '15 fps (mechanical), 40 fps (electronic)',
         maxFPS: 40,
         video: '6.2K @ 30p, 4K @ 120p, Full HD @ 240p',
+        videoDynamicRange: 'F-Log2: ~13+ stops',
         batteryLife: 580,
         weight: 660,
         memory: 'Dual slots (SD + CFexpress Type B)',
@@ -59,6 +60,7 @@ const cameras = [
         continuousShooting: '15 fps (mechanical), 20 fps (electronic)',
         maxFPS: 20,
         video: '8K @ 30p, 6.2K @ 30p, 4K @ 60p, Full HD @ 240p',
+        videoDynamicRange: 'F-Log2: ~13+ stops',
         batteryLife: 680,
         weight: 660,
         memory: 'Dual SD card slots',
@@ -104,6 +106,7 @@ const cameras = [
         continuousShooting: '15 fps (mechanical), 20 fps (electronic)',
         maxFPS: 20,
         video: '6.2K @ 30p, 4K @ 60p, Full HD @ 240p',
+        videoDynamicRange: 'F-Log: ~13 stops (ISO 200-400)',
         batteryLife: 580,
         weight: 557,
         memory: 'Dual UHS-II SD card slots',
@@ -150,6 +153,7 @@ const cameras = [
         continuousShooting: '8 fps (mechanical), 13 fps (electronic), 20 fps (1.29x crop)',
         maxFPS: 20,
         video: '6.2K @ 30p, 4K @ 60p, Full HD @ 240p',
+        videoDynamicRange: 'F-Log: ~13 stops (ISO 200-400)',
         batteryLife: 460,
         weight: 450,
         memory: 'Single SD card slot',
@@ -195,6 +199,7 @@ const cameras = [
         continuousShooting: '8 fps (mechanical), 20 fps (electronic)',
         maxFPS: 20,
         video: '6.2K @ 30p, 4K @ 60p, Full HD @ 240p',
+        videoDynamicRange: 'F-Log: ~12 stops',
         batteryLife: 750,
         weight: 491,
         memory: 'Single SD card slot',
@@ -240,6 +245,7 @@ const cameras = [
         continuousShooting: '15 fps (mechanical), 20 fps (electronic)',
         maxFPS: 20,
         video: '6.2K @ 30p, 4K @ 60p, Full HD @ 240p',
+        videoDynamicRange: 'F-Log: ~13 stops (ISO 200-400)',
         batteryLife: 580,
         weight: 550,
         memory: 'Single SD card slot',
@@ -285,6 +291,7 @@ const cameras = [
         continuousShooting: '8 fps (mechanical), 30 fps (electronic, 1.25x crop)',
         maxFPS: 30,
         video: '6K @ 30p, 4K @ 60p, Full HD @ 240p (10-bit color)',
+        videoDynamicRange: 'F-Log: ~12 stops',
         batteryLife: 425,
         weight: 378,
         memory: 'Single SD card slot',
@@ -331,6 +338,7 @@ const cameras = [
         continuousShooting: '8 fps (mechanical), 20 fps (electronic)',
         maxFPS: 20,
         video: '6.2K @ 30p, 4K @ 60p, Full HD @ 60p',
+        videoDynamicRange: 'F-Log: ~12 stops',
         batteryLife: 475,
         weight: 375,
         memory: 'Single SD card slot',
@@ -415,6 +423,10 @@ function createCameraCard(camera) {
                     <div class="spec-item">
                         <span class="spec-label">🎥 Video:</span>
                         <span class="spec-value">${camera.video}</span>
+                    </div>
+                    <div class="spec-item">
+                        <span class="spec-label">📊 Video Dynamic Range:</span>
+                        <span class="spec-value">${camera.videoDynamicRange || 'N/A'}</span>
                     </div>
                     <div class="spec-item">
                         <span class="spec-label">🔋 Battery:</span>
@@ -617,6 +629,7 @@ function performComparison() {
                     <tr><td>Sensor</td><td>${camera1.sensor}</td></tr>
                     <tr><td>Max FPS</td><td>${camera1.maxFPS}</td></tr>
                     <tr><td>Video</td><td>${camera1.video}</td></tr>
+                    <tr><td>Video Dynamic Range</td><td>${camera1.videoDynamicRange || 'N/A'}</td></tr>
                     <tr><td>Battery</td><td>~${camera1.batteryLife} shots</td></tr>
                     <tr><td>Weight</td><td>${camera1.weight}g</td></tr>
                     <tr><td>IBIS</td><td>${camera1.ibis ? '✅' : '❌'}</td></tr>
@@ -632,6 +645,7 @@ function performComparison() {
                     <tr><td>Sensor</td><td>${camera2.sensor}</td></tr>
                     <tr><td>Max FPS</td><td>${camera2.maxFPS}</td></tr>
                     <tr><td>Video</td><td>${camera2.video}</td></tr>
+                    <tr><td>Video Dynamic Range</td><td>${camera2.videoDynamicRange || 'N/A'}</td></tr>
                     <tr><td>Battery</td><td>~${camera2.batteryLife} shots</td></tr>
                     <tr><td>Weight</td><td>${camera2.weight}g</td></tr>
                     <tr><td>IBIS</td><td>${camera2.ibis ? '✅' : '❌'}</td></tr>
