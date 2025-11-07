@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional cinematography guide for Fujifilm X-Series cameras - video specs, codecs, dynamic range, and recommendations for filmmakers">
+    <meta name="keywords" content="Fujifilm, cinematography, video, F-Log, F-Log2, 8K, 4K, professional video, filmmaking">
+    <title>Professional Cinematography Guide | Fujifilm X-Series</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .video-spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .video-spec-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--secondary-color);
+        }
+        .video-spec-card h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        .codec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .codec-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.75rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        .codec-table td {
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .codec-table tr:hover {
+            background-color: var(--bg-light);
+        }
+        .feature-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0.25rem;
+        }
+        .feature-badge.pro {
+            background-color: var(--accent-color);
+        }
+        .workflow-section {
+            background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        .workflow-step {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+        .workflow-step::before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2rem;
+            height: 2rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .workflow-container {
+            counter-reset: step;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header" id="main-header">
+        <div class="container">
+            <h1>🎬 Professional Cinematography Guide</h1>
+            <p class="subtitle">Complete video specifications and recommendations for professional filmmakers</p>
+            <nav style="margin-top: 1rem;">
+                <a href="index.html" style="color: white; text-decoration: underline;">← Back to Main Guide</a>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="sticky-nav" id="sticky-nav">
+        <div class="container">
+            <ul class="nav-menu">
+                <li><a href="#overview">Overview</a></li>
+                <li><a href="#specs">Video Specs</a></li>
+                <li><a href="#codecs">Codecs & Formats</a></li>
+                <li><a href="#dynamic-range">Dynamic Range</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+                <li><a href="#workflow">Workflow</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="overview" class="section">
+            <h2>🎥 Overview</h2>
+            <p>Fujifilm X-Series cameras have become a popular choice for professional cinematographers, offering exceptional video quality, extensive color grading flexibility, and professional codecs in compact APS-C bodies. This guide focuses specifically on video capabilities, codecs, dynamic range, and workflow considerations for professional video production.</p>
+            
+            <div class="features-box">
+                <h3>Key Video Features Across the Lineup</h3>
+                <ul class="features-list">
+                    <li>🎨 <strong>F-Log & F-Log2</strong>: Professional log profiles for maximum dynamic range and color grading flexibility</li>
+                    <li>📹 <strong>10-bit & 12-bit Recording</strong>: Higher color depth for professional post-production</li>
+                    <li>🎬 <strong>Multiple Codecs</strong>: H.265, ProRes, and external RAW recording options</li>
+                    <li>⚡ <strong>High Frame Rates</strong>: Up to 240fps for slow motion and creative effects</li>
+                    <li>📐 <strong>Multiple Resolutions</strong>: From 8K down to Full HD, optimized for different delivery formats</li>
+                    <li>🔧 <strong>External Recording</strong>: HDMI output for external recorders and monitors</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="specs" class="section">
+            <h2>📊 Complete Video Specifications</h2>
+            
+            <div class="video-spec-grid" id="video-specs-container">
+                <!-- Populated by JavaScript -->
+            </div>
+        </section>
+
+        <section id="codecs" class="section">
+            <h2>🎞️ Codecs & Recording Formats</h2>
+            
+            <div class="table-container">
+                <h3>Internal Recording Codecs</h3>
+                <table class="comparison-table full-width">
+                    <thead>
+                        <tr>
+                            <th>Camera</th>
+                            <th>H.264</th>
+                            <th>H.265</th>
+                            <th>ProRes</th>
+                            <th>Bit Depth</th>
+                            <th>Chroma</th>
+                        </tr>
+                    </thead>
+                    <tbody id="codec-table-body">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3>External Recording Capabilities</h3>
+                <table class="comparison-table full-width">
+                    <thead>
+                        <tr>
+                            <th>Camera</th>
+                            <th>HDMI Output</th>
+                            <th>RAW Output</th>
+                            <th>Max Resolution</th>
+                            <th>Frame Rates</th>
+                        </tr>
+                    </thead>
+                    <tbody id="external-table-body">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="features-box">
+                <h3>Codec Recommendations</h3>
+                <ul>
+                    <li><strong>H.265 (HEVC)</strong>: Best compression efficiency, ideal for long-form content and storage-conscious projects. Supported by X-H2S, X-H2, X-T5, X-E5, X-S20, X-T50.</li>
+                    <li><strong>H.264</strong>: Universal compatibility, smaller file sizes. Good for quick turnaround projects and web delivery.</li>
+                    <li><strong>ProRes</strong>: Professional editing codec with minimal compression. Available on X-H2S and X-H2. Ideal for high-end productions and color grading workflows.</li>
+                    <li><strong>External RAW</strong>: Maximum quality and flexibility. X-H2S and X-H2 support external RAW recording via HDMI to Atomos or Blackmagic recorders.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="dynamic-range" class="section">
+            <h2>📊 Dynamic Range & Color Science</h2>
+            
+            <div class="table-container">
+                <h3>Dynamic Range Specifications</h3>
+                <table class="comparison-table full-width">
+                    <thead>
+                        <tr>
+                            <th>Camera</th>
+                            <th>F-Log Dynamic Range</th>
+                            <th>F-Log2 Dynamic Range</th>
+                            <th>Best ISO for DR</th>
+                            <th>Color Depth</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dr-table-body">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="features-box">
+                <h3>Understanding F-Log vs F-Log2</h3>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+                    <div>
+                        <h4>F-Log</h4>
+                        <ul>
+                            <li>~12-13 stops of dynamic range</li>
+                            <li>Available on all X-Series cameras</li>
+                            <li>Optimized for 10-bit recording</li>
+                            <li>Good balance of DR and noise</li>
+                            <li>Easier to grade than F-Log2</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>F-Log2</h4>
+                        <ul>
+                            <li>~13+ stops of dynamic range</li>
+                            <li>Available on X-H2S and X-H2 only</li>
+                            <li>Optimized for 12-bit recording</li>
+                            <li>Maximum dynamic range</li>
+                            <li>Requires more careful exposure</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-box">
+                <h3>Color Science & Film Simulations</h3>
+                <p>Fujifilm's legendary film simulations are available even in video mode, providing instant color grading options. For maximum flexibility, shoot in F-Log/F-Log2 and apply film simulations in post-production using Fujifilm's official LUTs, or use them in-camera for quick turnaround projects.</p>
+                <p><strong>Available Film Simulations:</strong> Provia, Velvia, Astia, Classic Chrome, Pro Neg. Hi, Pro Neg. Std, Eterna, Eterna Bleach Bypass, Classic Neg., Nostalgic Neg., and more (varies by camera model).</p>
+            </div>
+        </section>
+
+        <section id="recommendations" class="section">
+            <h2>🎯 Camera Recommendations by Video Use Case</h2>
+            
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <h3>🎬 Feature Films & High-End Productions</h3>
+                    <p><strong>Top Pick: X-H2S</strong></p>
+                    <ul>
+                        <li>F-Log2 with maximum dynamic range</li>
+                        <li>ProRes internal recording</li>
+                        <li>External RAW via HDMI</li>
+                        <li>4K 120fps for slow motion</li>
+                        <li>Best autofocus for tracking</li>
+                        <li>Optional cooling fan for extended recording</li>
+                    </ul>
+                    <p><strong>Alternative: X-H2</strong> - If you need 8K resolution for future-proofing or VFX work.</p>
+                </div>
+
+                <div class="recommendation-card">
+                    <h3>📺 Broadcast & Documentary</h3>
+                    <p><strong>Top Pick: X-H2</strong></p>
+                    <ul>
+                        <li>8K resolution for cropping/reframing</li>
+                        <li>F-Log2 for maximum flexibility</li>
+                        <li>ProRes codec support</li>
+                        <li>Dual card slots for redundancy</li>
+                        <li>Excellent battery life</li>
+                        <li>Weather-sealed for outdoor work</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card">
+                    <h3>🎥 Commercial & Corporate Video</h3>
+                    <p><strong>Top Pick: X-H2S or X-T5</strong></p>
+                    <ul>
+                        <li><strong>X-H2S</strong>: For fast-paced shoots, action, or when you need ProRes</li>
+                        <li><strong>X-T5</strong>: For run-and-gun, travel, or when you need high resolution in a compact body</li>
+                        <li>Both offer excellent 4K quality</li>
+                        <li>10-bit H.265 for efficient workflow</li>
+                        <li>Great color science for client approval</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card">
+                    <h3>📱 Content Creation & Vlogging</h3>
+                    <p><strong>Top Pick: X-S20</strong></p>
+                    <ul>
+                        <li>Fully articulating screen</li>
+                        <li>Best battery life for all-day shooting</li>
+                        <li>Dedicated vlogging mode</li>
+                        <li>Excellent autofocus with deep learning</li>
+                        <li>Compact and lightweight</li>
+                        <li>10-bit recording for color grading</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card">
+                    <h3>🎨 Music Videos & Creative Projects</h3>
+                    <p><strong>Top Pick: X-H2S</strong></p>
+                    <ul>
+                        <li>4K 120fps for creative slow motion</li>
+                        <li>240fps Full HD for extreme slow motion</li>
+                        <li>F-Log2 for maximum color grading flexibility</li>
+                        <li>Fast autofocus for dynamic shots</li>
+                        <li>ProRes for high-end post-production</li>
+                    </ul>
+                </div>
+
+                <div class="recommendation-card">
+                    <h3>📹 Event & Wedding Videography</h3>
+                    <p><strong>Top Pick: X-T5 or X-S20</strong></p>
+                    <ul>
+                        <li><strong>X-T5</strong>: Dual cards, weather-sealed, high resolution</li>
+                        <li><strong>X-S20</strong>: Best battery life, articulating screen, compact</li>
+                        <li>Reliable autofocus for moving subjects</li>
+                        <li>Good low-light performance</li>
+                        <li>Quick turnaround with film simulations</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow" class="section">
+            <h2>🔄 Professional Video Workflow</h2>
+            
+            <div class="workflow-section workflow-container">
+                <h3>Recommended Workflow for Professional Projects</h3>
+                
+                <div class="workflow-step">
+                    <h4>1. Pre-Production</h4>
+                    <ul>
+                        <li>Choose camera based on resolution needs (8K for X-H2, 4K 120fps for X-H2S)</li>
+                        <li>Select codec: ProRes for high-end, H.265 for efficiency</li>
+                        <li>Plan for F-Log2 (X-H2S/X-H2) or F-Log (all cameras) recording</li>
+                        <li>Test exposure and color workflow before shoot</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-step">
+                    <h4>2. Production</h4>
+                    <ul>
+                        <li>Shoot in F-Log/F-Log2 for maximum flexibility</li>
+                        <li>Use external monitor for focus and exposure (false color, zebras)</li>
+                        <li>Record to dual cards when available (X-H2S, X-H2, X-T5) for backup</li>
+                        <li>Monitor temperature during long recordings (especially X-H2S with fan)</li>
+                        <li>Use appropriate frame rates: 24p for cinematic, 60p for smooth motion</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-step">
+                    <h4>3. Post-Production</h4>
+                    <ul>
+                        <li>Import ProRes or H.265 files into your NLE (Premiere, DaVinci, Final Cut)</li>
+                        <li>Apply Fujifilm's official F-Log to Rec.709 LUTs for color correction</li>
+                        <li>For F-Log2, use the dedicated F-Log2 LUTs (available from Fujifilm)</li>
+                        <li>Grade with the full dynamic range in mind - protect highlights and shadows</li>
+                        <li>Export in your delivery format (4K, 1080p, etc.)</li>
+                    </ul>
+                </div>
+
+                <div class="workflow-step">
+                    <h4>4. Color Grading Tips</h4>
+                    <ul>
+                        <li>F-Log2 offers more headroom - expose to the right (ETTR) for best results</li>
+                        <li>Use waveform monitors and histograms during shooting</li>
+                        <li>Fujifilm's color science is excellent - don't over-grade</li>
+                        <li>Test LUTs before applying to entire project</li>
+                        <li>Consider using film simulations as starting points for creative looks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="features-box">
+                <h3>Essential Accessories for Professional Video</h3>
+                <ul>
+                    <li><strong>External Recorder</strong>: Atomos Ninja V+ or Blackmagic Video Assist for RAW/ProRes recording</li>
+                    <li><strong>External Monitor</strong>: For focus peaking, false color, and exposure tools</li>
+                    <li><strong>Gimbal/Stabilizer</strong>: For smooth camera movement (cameras have excellent IBIS, but gimbals add more stability)</li>
+                    <li><strong>ND Filters</strong>: Essential for maintaining proper exposure in bright conditions</li>
+                    <li><strong>External Power</strong>: USB-C power banks for extended recording sessions</li>
+                    <li><strong>Cooling Fan</strong>: Optional for X-H2S for unlimited recording time</li>
+                    <li><strong>Audio Solutions</strong>: External recorders or XLR adapters for professional audio</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="summary-box">
+                <h3>📝 Summary for Professional Cinematographers</h3>
+                <p>Fujifilm X-Series cameras offer professional-grade video capabilities in compact, affordable packages. The X-H2S and X-H2 stand out for high-end productions with F-Log2, ProRes, and external RAW capabilities, while the X-T5, X-S20, and others provide excellent 10-bit 4K recording for a wide range of professional applications.</p>
+                
+                <h4>Key Takeaways</h4>
+                <ul>
+                    <li>🎬 <strong>Maximum Quality?</strong> Choose X-H2S or X-H2 with F-Log2 and ProRes</li>
+                    <li>📹 <strong>Need 8K?</strong> X-H2 is the only option with 8K internal recording</li>
+                    <li>⚡ <strong>Need High Frame Rates?</strong> X-H2S offers 4K 120fps and 240fps Full HD</li>
+                    <li>🎥 <strong>Run-and-Gun?</strong> X-T5 or X-S20 offer excellent balance of quality and portability</li>
+                    <li>💰 <strong>Budget-Conscious Pro?</strong> X-S20 or X-T50 still offer 10-bit 4K recording</li>
+                    <li>🔧 <strong>External Recording?</strong> X-H2S and X-H2 support RAW output via HDMI</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p><a href="index.html" style="color: white; text-decoration: underline;">← Back to Main Buying Guide</a></p>
+            <p><strong>Happy Filmmaking! 🎬</strong></p>
+            <p><em>Last Updated: Based on current Fujifilm X-Series lineup</em></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cinematography.js"></script>
+</body>
+</html>
+
